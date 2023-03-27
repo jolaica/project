@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&family=Rubik&display=swap");
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Rubik", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&family=Rubik&display=swap");
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.formContainer {
+  width: 50%;
+  position: absolute;
+  left: 0;
+}
+
+.loginForm {
+  background-color: white;
+  color: black;
+  width: 100%;
+  min-height: 111.3vh;
+  left: 0px;
+  top: 0px;
+  padding: 25%;
+}
+
+.loginForm h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 36px;
+  margin-bottom: 2rem;
+}
+
+.alert {
+  background-color: #16ff02;
+  color: white;
+  font-family: "Rubik", sans-serif;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.emailContainer,
+.pswdContainer {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.loginForm label {
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.input1,
+.input2 {
+  font-family: "Rubik", sans-serif;
+  color: black;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: transparent;
+  padding: 0.8rem;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.input2 {
+  padding-right: 3.5rem;
+}
+
+.input1::placeholder,
+.input2::placeholder {
+  color: #c3c8cd;
+}
+
+.input1.active:focus,
+.input2.active:focus {
+  border-color: #1cb6b6;
+  outline: 1px solid #1cb6b6 !important; /* Active state border color */
+}
+
+.input1.error,
+.input2.error {
+  border-color: #ff4141; /* Error state border color */
+}
+
+.showPasswordButton {
+  font-family: "Rubik", sans-serif;
+  background-color: transparent;
+  border: none;
+  color: black;
+  font-weight: 700;
+  cursor: pointer;
+  position: absolute;
+  font-size: 0.7rem;
+  top: 0;
+  right: 0;
+  margin-top: 42px;
+  margin-right: 15px;
+}
+
+.errorMessage1,
+.errorMessage2 {
+  color: #ff4141;
+  font-family: "Rubik", sans-serif;
+  font-size: 0.875em;
+}
+
+.button {
+  width: 100%;
+  height: 3rem;
+  border: 1px solid #0c1e45;
+  border-radius: 8px;
+  padding: 0.5rem;
+  background: #0c1e45;
+  cursor: pointer;
+  color: white;
+}
+
+.imgContainer {
+  width: 50%;
+  position: absolute;
+  right: 0;
+}
+
+.imgBg {
+  background-image: url("/phil_image.png");
+  background-size: cover;
+  background-position: center;
+  /* background-color: white;
+  background-size: contain; */
+  background-repeat: no-repeat;
+  height: 111.3vh;
+  width: 100%;
+}
+
+/* .input1:-webkit-autofill,
+.input2:-webkit-autofill {
+  background-color: transparent;
+  color: black;
+} */

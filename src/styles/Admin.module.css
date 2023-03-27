@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&family=Rubik&display=swap");
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Rubik", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&family=Rubik&display=swap");
+}
+.form {
+  padding: 50px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: absolute;
+  height: 776px;
+  width: 739px;
+  left: -50px;
+  top: 100px;
+  border-radius: 8px;
+  border: 1px solid black;
+}
+
+.admin_body {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Rubik", sans-serif;
+  margin-left: 39%;
+  border-radius: 0px;
+  margin-top: 5%;
+}
+.back img {
+  display: flex;
+  margin-top: 8%;
+  position: fixed; /* Position the element relative to its nearest positioned ancestor */
+  top: 0; /* Position it at the top */
+  left: 22%;
+}
+.my_profile {
+  justify-content: center;
+  position: center;
+  width: 419px;
+  height: 50px;
+  margin-left: 113px;
+  margin-top: 5%;
+
+  /* H1 title */
+
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 55px;
+  text-align: center;
+}
+.personal_info {
+  justify-content: center;
+  position: center;
+  margin-top: -5%;
+
+  /* H4 title */
+
+  font-family: Rubik;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+
+  height: 53px;
+  width: 463px;
+  padding-left: 5%;
+  padding-right: 5%;
+  border-radius: 8px;
+
+  /* gap: 1%; */
+  margin-top: 2%;
+}
+.label {
+  display: block;
+  text-align: left;
+}
+
+.input {
+  display: block;
+  margin-bottom: 0.9px;
+}
+.change_btn {
+  height: 53px;
+  width: 169px;
+  border-radius: 8px;
+  margin-right: -70%;
+  margin-top: 40%;
+  border-radius: 8px;
+  background: #0c1e45;
+  color: white;
+
+  box-sizing: border-box;
+  /* Primary1 */
+
+  border: 1px solid #0c1e45;
+
+  font-family: "Rubik", sans-serif;
+}
+.cancel_btn {
+  position: center;
+  height: 53px;
+  width: 169px;
+  border-radius: 8px;
+}

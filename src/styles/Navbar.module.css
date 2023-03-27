@@ -1,0 +1,11 @@
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-right: 68.5%;
+  font-family: "Rubik";
+  font-weight: bolder;
+  font-size: 0.9rem;
+  color: rgb(51, 50, 50);
+}

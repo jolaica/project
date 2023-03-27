@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Rubik&display=swap");
+
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Rubik";
+  src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Rubik&display=swap");
+}
+.all_body {
+  width: 90%;
+  height: 85vh;
+  max-width: 800px;
+  margin: 80px auto 0px;
+  margin-left: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  background: #ffffff;
+  box-shadow: 0px 0px 4px 4px #f6f3f3;
+  border-radius: 5px;
+}
+.expand_button {
+  color: #323643;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: transparent;
+  float: left;
+}
+.searchbar {
+  margin-top: 13%;
+  display: flex;
+  align-items: center;
+  border: 1px solid #000000;
+  border-radius: 8px;
+
+  width: 864px;
+  height: 53px;
+  margin-left: 25%;
+
+  box-sizing: border-box;
+}
+
+.searchbar input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 12px;
+  height: 50%;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  margin-left: 2%;
+}
+
+.searchbar button {
+  margin-left: 10px;
+  background-color: transparent;
+  border: #ccc;
+  width: 80px;
+  height: 40px;
+  padding: 9px 10px;
+  padding-left: 2%;
+}
+.searchIcon {
+  font-size: 22px;
+  border-radius: 18px;
+}
+.category {
+  border: 1px solid black;
+  color: black;
+  font-size: 18px;
+
+  margin-left: 87%;
+  margin-bottom: 30%;
+  margin-top: -3.8%;
+  display: flex;
+  float: right center;
+
+  height: 53px;
+  width: 124px;
+
+  border-radius: 8px;
+}
+.category a {
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-top: 10%;
+}
+.create_btn {
+  box-sizing: border-box;
+  box-shadow: 0px 2px 0px #ffffff;
+  font-size: 18px;
+
+  border: 1px solid #0c1e45;
+  border-radius: 8px;
+  background: #0c1e45;
+  color: white;
+
+  margin-left: 87%;
+  margin-bottom: 30%;
+  margin-top: -38%;
+  display: flex;
+  float: right center;
+
+  height: 53px;
+  width: 124px;
+
+  border-radius: 8px;
+}
+.create_post {
+  padding: 10px 10px;
+}
+.all_title {
+  font-family: "Montserrat", sans-serif;
+  justify-content: center;
+  position: absolute;
+  font-size: 40px;
+  margin-left: -0.8%;
+
+  width: 800px;
+  left: 376px;
+  top: 140px;
+} /* H1 title */
+.all_title h2 {
+  font-weight: 700;
+
+  text-align: center;
+
+  /* Black1 */
+
+  color: #000000;
+}
+.table_body {
+  height: 644px;
+  width: 1003px;
+  margin-left: 25%;
+  margin-top: 18%;
+  border-radius: 8px;
+
+  box-sizing: border-box;
+
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+
+  background: #ffffff;
+  /* Gray2 */
+
+  border-bottom: 1px solid #dedede;
+  box-shadow: 0px 0px 4px 4px #f6f3f3;
+  border-radius: 8px;
+}
+.table_body {
+  display: grid;
+  grid-template-columns: 483px 218px 137px 213px;
+  height: 644px;
+  grid-template-rows: repeat(4, 1fr);
+  /*  grid-gap: 10px; */ /* optional */
+}
+
+.title_table {
+  grid-column: 1 / span 1;
+  grid-row: 1 / span 1;
+  height: 644px;
+}
+
+.date_table {
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
+
+  height: 644px;
+}
+
+.action_table {
+  grid-column: 4 / span 1;
+  grid-row: 1 / span 1;
+  height: 644px;
+  margin-right: 25%;
+}
+.title,
+.date,
+.action {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid gray;
+
+  padding: 10px 10px;
+}
+.action {
+  margin-left: -90%;
+}

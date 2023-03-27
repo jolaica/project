@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&family=Rubik&display=swap");
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Rubik", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&family=Rubik&display=swap");
+}
+
+.create {
+  justify-content: center;
+  position: absolute;
+  width: 419px;
+  height: 50px;
+  left: 600px;
+  top: 15%;
+
+  /* H1 title */
+
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 55px;
+  text-align: center;
+
+  /* Black1 */
+
+  color: #000000;
+}
+.sidebar {
+  position: fixed;
+
+  width: 277px;
+  height: 944px;
+  left: 0px;
+  top: 10%;
+  /* Primary1 */
+  background: #0c1e45;
+}
+.all_btn {
+  /* All post b. */
+  position: absolute;
+
+  height: 53px;
+  width: 225px;
+  border: 1px solid #002b89;
+
+  left: 26px;
+  margin-top: 10%;
+  background: #0c1e45;
+  box-shadow: 0px 2px 0px #ffffff;
+  border-radius: 8px;
+}
+/* Rectangle 11 */
+.all_btn {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  border: 1px solid #0c1e45;
+  border-radius: 8px;
+}
+
+.all_btn {
+  position: absolute;
+  width: 235px;
+  height: 27px;
+  left: calc(50% - 235px / 2);
+  top: calc(10% - 27px / 2 - 0.5px);
+  font-family: "IBM Plex Sans Thai Looped";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  color: #ffffff;
+}
+.draft_btn {
+  position: absolute;
+  width: 225px;
+  height: 53px;
+  left: 26px;
+  margin-top: 4%;
+  background: #0c1e45;
+  box-shadow: 0px 2px 0px #ffffff;
+  border-radius: 8px;
+}
+.draft_btn {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  border: 1px solid #0c1e45;
+  border-radius: 8px;
+}
+.draft_btn {
+  position: absolute;
+  width: 235px;
+  height: 27px;
+  left: calc(50% - 235px / 2);
+  top: calc(18% - 27px / 2 - 0.5px);
+  font-family: "IBM Plex Sans Thai Looped";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.delete_btn {
+  position: absolute;
+  width: 225px;
+  height: 53px;
+  left: 26px;
+  margin-top: 25%;
+  background: #0c1e45;
+  box-shadow: 0px 2px 0px #ffffff;
+  border-radius: 8px;
+}
+.delete_btn {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  border: 1px solid #0c1e45;
+  border-radius: 8px;
+}
+.delete_btn {
+  position: absolute;
+  width: 235px;
+  height: 27px;
+  left: calc(50% - 235px / 2);
+  top: calc(18% - 27px / 2 - 0.5px);
+  font-family: "IBM Plex Sans Thai Looped";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  color: #ffffff;
+}
