@@ -9,7 +9,7 @@
   justify-content: center;
   position: absolute;
   width: 419px;
-  height: 50px;
+  height: 53px;
   left: 600px;
   top: 15%;
 
@@ -45,7 +45,7 @@
   border: 1px solid #002b89;
 
   left: 26px;
-  margin-top: 10%;
+  margin-top: 0%;
   background: #0c1e45;
   box-shadow: 0px 2px 0px #ffffff;
   border-radius: 8px;
@@ -58,14 +58,14 @@
   right: 0%;
   top: 0%;
   bottom: 0%;
-  border: 1px solid #0c1e45;
+  border: 1px solid #002b89;
   border-radius: 8px;
 }
 
 .all_btn {
   position: absolute;
   width: 235px;
-  height: 27px;
+  height: 53px;
   left: calc(50% - 235px / 2);
   top: calc(10% - 27px / 2 - 0.5px);
   font-family: "IBM Plex Sans Thai Looped";
@@ -81,7 +81,7 @@
   width: 225px;
   height: 53px;
   left: 26px;
-  margin-top: 4%;
+  margin-top: 0%;
   background: #0c1e45;
   box-shadow: 0px 2px 0px #ffffff;
   border-radius: 8px;
@@ -93,13 +93,13 @@
   right: 0%;
   top: 0%;
   bottom: 0%;
-  border: 1px solid #0c1e45;
+  border: 1px solid #002b89;
   border-radius: 8px;
 }
 .draft_btn {
   position: absolute;
   width: 235px;
-  height: 27px;
+  height: 53px;
   left: calc(50% - 235px / 2);
   top: calc(18% - 27px / 2 - 0.5px);
   font-family: "IBM Plex Sans Thai Looped";
@@ -116,7 +116,7 @@
   width: 225px;
   height: 53px;
   left: 26px;
-  margin-top: 25%;
+  margin-top: 27%;
   background: #0c1e45;
   box-shadow: 0px 2px 0px #ffffff;
   border-radius: 8px;
@@ -128,13 +128,13 @@
   right: 0%;
   top: 0%;
   bottom: 0%;
-  border: 1px solid #0c1e45;
+  border: 1px solid #002b89;
   border-radius: 8px;
 }
 .delete_btn {
   position: absolute;
   width: 235px;
-  height: 27px;
+  height: 53px;
   left: calc(50% - 235px / 2);
   top: calc(18% - 27px / 2 - 0.5px);
   font-family: "IBM Plex Sans Thai Looped";

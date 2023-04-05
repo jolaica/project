@@ -16,7 +16,6 @@
   left: -50px;
   top: 100px;
   border-radius: 8px;
-  border: 1px solid black;
 }
 
 .admin_body {
@@ -92,26 +91,27 @@
   display: block;
   margin-bottom: 0.9px;
 }
+.button_container {
+  display: flex;
+  gap: 10px;
+  width: 50%;
+  margin-top: 30%;
+  margin-left: 20%;
+}
+
 .change_btn {
   height: 53px;
   width: 169px;
   border-radius: 8px;
-  margin-right: -70%;
-  margin-top: 40%;
-  border-radius: 8px;
   background: #0c1e45;
   color: white;
-
-  box-sizing: border-box;
-  /* Primary1 */
-
   border: 1px solid #0c1e45;
-
   font-family: "Rubik", sans-serif;
 }
+
 .cancel_btn {
-  position: center;
   height: 53px;
   width: 169px;
   border-radius: 8px;
+  font-family: "Rubik", sans-serif;
 }

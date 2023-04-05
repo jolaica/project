@@ -8,6 +8,7 @@ import Top from "./Top";
 import Footer from "./Footer";
 
 import styles from "@/styles/Draft.module.css";
+import Delete_Edit_btn from "./Delete_Edit_btn";
 
 const Draft = () => {
   return (
@@ -41,6 +42,7 @@ const Draft = () => {
         <div className={styles.action_table}>
           <div className={styles.restore}></div>
           <div className={styles.action}>ACTION</div>
+          <Delete_Edit_btn />
         </div>
         {/* <Footer /> */}
       </div>

@@ -7,6 +7,7 @@ import Top from "./Top";
 import Footer from "./Footer";
 
 import styles from "@/styles/All_post.module.css";
+import Delete_Edit_btn from "./Delete_Edit_btn";
 
 const All_post = () => {
   // Set initial state values
@@ -56,7 +57,9 @@ const All_post = () => {
         <div className={styles.action_table}>
           <div className={styles.restore}></div>
           <div className={styles.action}>ACTION</div>
+          <Delete_Edit_btn />
         </div>
+
         {/* <Footer /> */}
       </div>
 
@@ -70,7 +73,7 @@ const All_post = () => {
             <div className={styles.date}>{item.date}</div>
           </div>
           <div className={styles.action_table}>
-            <div className={styles.action}>ACTION</div>
+            <div className={styles.action}>ACTION </div>
           </div>
         </div>
       ))}

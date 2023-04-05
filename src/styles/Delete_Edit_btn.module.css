@@ -1,0 +1,68 @@
+.action_btn {
+  margin-top: 10%;
+  margin-right: 60%;
+}
+.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5%;
+  margin-left: -20%;
+  vertical-align: middle;
+}
+.delete_icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5%;
+  margin-left: -50%;
+  vertical-align: middle;
+}
+.button {
+  display: flex;
+  align-items: center;
+}
+
+.button img {
+  display: flex;
+
+  margin-right: 5px;
+}
+
+.edit-delete-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-delete-buttons button {
+  margin-left: -100px;
+
+  background-color: transparent;
+  border: none;
+
+  width: 45px;
+  height: 18px;
+
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  /* identical to box height */
+
+  text-align: center;
+
+  color: #000000;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.save-cancel-buttons {
+  display: flex;
+}
+
+.save-cancel-buttons button {
+  margin-right: 10px;
+}

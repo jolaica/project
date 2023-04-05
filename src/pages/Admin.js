@@ -67,13 +67,10 @@ const ChangePassword = ({ email }) => {
           />
         </label>
         <br />
-        <button type="submit" className={styles.cancel_btn}>
-          Cancel
-        </button>
-
-        <button type="submit" className={styles.change_btn}>
-          Save Changes
-        </button>
+        <div class={styles.button_container}>
+          <button class={styles.cancel_btn}>Cancel</button>
+          <button class={styles.change_btn}>Save Changes</button>
+        </div>
       </form>
       {errorMessage && <p>{errorMessage}</p>}
     </div>

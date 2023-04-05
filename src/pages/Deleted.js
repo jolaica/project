@@ -8,6 +8,7 @@ import Top from "./Top";
 import Footer from "./Footer";
 
 import styles from "@/styles/Deleted.module.css";
+import Delete_Edit_btn from "./Delete_Edit_btn";
 
 const Deleted = () => {
   return (
@@ -40,6 +41,7 @@ const Deleted = () => {
         <div className={styles.action_table}>
           <div className={styles.restore}></div>
           <div className={styles.action}>ACTION</div>
+          <Delete_Edit_btn />
         </div>
       </div>
     </div>

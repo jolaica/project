@@ -5,20 +5,20 @@ const Images = () => {
   const [blogData, setBlogData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(8);
-  const [expanded, setExpanded] = useState([]);
 
+  // Fetch data from API and update state
   useEffect(() => {
-    console.log("Fetching blog data...");
-    fetch(
-      "https://5d31-2001-4455-16a-4a00-3022-e484-e8b8-a625.ap.ngrok.io/api/blog/"
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        console.log("Fetched blog data:", data);
-        setBlogData(data);
-      })
-      .catch((error) => console.log(error));
-  }, []);
+    async function fetchData() {
+      const response = await fetch(
+        `http://10.0.254.23:8000/api/blog/?offset=${
+          (currentPage - 1) * itemsPerPage
+        }`
+      );
+      const data = await response.json();
+      setBlogData(data.results);
+    }
+    fetchData();
+  }, [currentPage, itemsPerPage]);
 
   // Calculate the index of the first and last items to show on the current page
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -36,46 +36,26 @@ const Images = () => {
 
   // Handle click events on the paging numbers
   const handleClick = (event) => {
-    console.log("Clicked page:", Number(event.target.id));
     setCurrentPage(Number(event.target.id));
   };
 
-  // Handle click events on the "Read More" button
-  const handleExpand = (id) => {
-    setExpanded([...expanded, id]);
-  };
-
   return (
-    <div className={styles.container}>
-      {currentItems.map((blog) => (
-        <div className={styles.blog_box} key={blog.id}>
-          <div className="blog_item">
-            <img
-              src="/cover1.png"
-              alt="Blog image"
-              width="100%"
-              height="auto"
-            />
+    <div>
+      <div className={styles.container}>
+        {currentItems.map((item) => (
+          <div className={styles.item} key={item.id}>
+            <img src={item.image} alt={item.title} />
             <p className={styles.blog_text}>Blog</p>
-            <h3>{blog.title}</h3>
-            <p>
-              {blog.body.length > 150 && !expanded.includes(blog.id)
-                ? blog.body.slice(0, 100) + "..."
-                : blog.body}
-            </p>
-            {blog.body.length > 150 && !expanded.includes(blog.id) && (
-              <button
-                onClick={() => handleExpand(blog.id)}
-                className={styles.expand_button}
-              >
-                Continue reading
-              </button>
-            )}
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
       <div className={styles.paging_body}>
         <div className={styles.paging}>
+          <div className={styles.paging_indicator}>
+            {`Page ${currentPage} of ${totalPages}`}
+          </div>
           {pageNumbers.map((number) => (
             <div
               key={number}
