@@ -51,16 +51,13 @@ const Images = () => {
   return (
     <div className={styles.container}>
       {blogData.map((item) => (
-        <Link
-          className={styles.item}
-          href={`/BlogPost/${item.slug}`}
-          passHref
-          key={item.id}
-        >
-          <img src={item.image} alt={item.title} />
-          <p className={styles.blog_text}>Blog</p>
-          <h3>{item.title}</h3>
-          <p>{item.description}</p>
+        <Link href={`/BlogPost/${item.slug}`} passHref key={item.id}>
+          <div className={styles.item}>
+            <img src={item.image} alt={item.title} />
+            <p className={styles.blog_text}>Blog</p>
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+          </div>
         </Link>
       ))}
 

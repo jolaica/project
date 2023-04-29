@@ -1,44 +1,20 @@
-import React, { useEffect, useState } from "react";
-import { useRouter } from "next/router";
+export default async function handler(req, res) {
+  const { slug } = req.query;
 
-const BlogPost = () => {
-  const router = useRouter();
-  const { slug } = router.query;
+  try {
+    const response = await fetch(
+      `https://a39f-49-145-192-47.ngrok-free.app/api/blog/${slug}`
+    );
 
-  const [blogPost, setBlogPost] = useState(null);
-
-  useEffect(() => {
-    async function fetchBlogPost() {
-      try {
-        const response = await fetch(`/api/blog/${slug}`);
-        if (!response.ok) {
-          throw new Error("Failed to fetch blog post data");
-        }
-        const data = await response.json();
-        console.log("API response:", data);
-        setBlogPost(data);
-      } catch (error) {
-        console.error(error);
-      }
+    if (!response.ok) {
+      throw new Error("Failed to fetch blog data");
     }
-    if (slug) {
-      fetchBlogPost();
-    }
-  }, [slug]);
 
-  if (!blogPost) {
-    return <div>Loading...</div>;
+    const data = await response.json();
+    console.log("API response:", data);
+    res.status(200).json(data);
+  } catch (error) {
+    console.error(error);
+    res.status(404).json({ message: "Item not found" });
   }
-
-  return (
-    <div>
-      <h1>{blogPost.title}</h1>
-      <p>
-        {blogPost.description} on {blogPost.date}
-      </p>
-      <div dangerouslySetInnerHTML={{ __html: blogPost.content }}></div>
-    </div>
-  );
-};
-
-export default BlogPost;
+}
