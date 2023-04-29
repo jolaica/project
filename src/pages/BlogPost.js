@@ -6,7 +6,7 @@ const BlogPost = () => {
   const [blogPost, setBlogPost] = useState({});
 
   useEffect(() => {
-    fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
+    fetch(`http://192.168.1.7:8000/api/blog/${id}`)
       .then((response) => response.json())
       .then((data) => setBlogPost(data))
       .catch((error) => console.log(error));
@@ -15,7 +15,7 @@ const BlogPost = () => {
   return (
     <div>
       <h1>{blogPost.title}</h1>
-      <p>{blogPost.body}</p>
+      <p>{blogPost.description}</p>
     </div>
   );
 };

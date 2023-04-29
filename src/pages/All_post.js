@@ -60,7 +60,7 @@ const All_post = () => {
           <Delete_Edit_btn />
         </div>
 
-        {/* <Footer /> */}
+         <Footer />
       </div>
 
       {/* Render the current items */}

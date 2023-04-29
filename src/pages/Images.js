@@ -1,61 +1,71 @@
 import React, { useEffect, useState } from "react";
-import styles from "@/styles/Blog.module.css";
+import Link from "next/link";
+import styles from "@/styles/Images.module.css";
 
 const Images = () => {
   const [blogData, setBlogData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(8);
+  const [totalCount, setTotalCount] = useState(0);
+  const [searchQuery, setSearchQuery] = useState(""); // Added searchQuery state
+  const pageNumbers = [1, 2, 3, 4];
+  const itemsPerPage = 8;
 
-  // Fetch data from API and update state
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch(
-        `http://10.0.254.23:8000/api/blog/?offset=${
-          (currentPage - 1) * itemsPerPage
-        }`
-      );
-      const data = await response.json();
-      setBlogData(data.results);
+      try {
+        const response = await fetch(
+          `/api/blog?page=${currentPage}&limit=${itemsPerPage}&offset=${
+            (currentPage - 1) * itemsPerPage
+          }&q=${searchQuery}` // Include searchQuery in the API endpoint URL
+        );
+        if (!response.ok) {
+          throw new Error("Failed to fetch blog data");
+        }
+        const data = await response.json();
+        console.log("API response:", data);
+        setBlogData(data.results);
+        setTotalCount(data.totalCount);
+      } catch (error) {
+        console.error(error);
+      }
     }
     fetchData();
-  }, [currentPage, itemsPerPage]);
+  }, [currentPage, searchQuery]); // Update when currentPage or searchQuery changes
 
-  // Calculate the index of the first and last items to show on the current page
-  const indexOfLastItem = currentPage * itemsPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = blogData.slice(indexOfFirstItem, indexOfLastItem);
-
-  // Calculate the total number of pages
-  const totalPages = Math.ceil(blogData.length / itemsPerPage);
-
-  // Generate an array of paging numbers to display
-  const pageNumbers = [];
-  for (let i = 1; i <= totalPages; i++) {
-    pageNumbers.push(i);
-  }
-
-  // Handle click events on the paging numbers
   const handleClick = (event) => {
-    setCurrentPage(Number(event.target.id));
+    const clickedPage = parseInt(event.target.id);
+    console.log("Clicked page:", clickedPage);
+    setCurrentPage(clickedPage);
+  };
+
+  const totalPages = Math.ceil(totalCount / itemsPerPage);
+
+  console.log("blogData:", blogData);
+  console.log("currentPage:", currentPage);
+  console.log("totalCount:", totalCount);
+
+  const handleSearchInputChange = (event) => {
+    setSearchQuery(event.target.value); // Update searchQuery state with input value
   };
 
   return (
-    <div>
-      <div className={styles.container}>
-        {currentItems.map((item) => (
-          <div className={styles.item} key={item.id}>
-            <img src={item.image} alt={item.title} />
-            <p className={styles.blog_text}>Blog</p>
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
-          </div>
-        ))}
-      </div>
+    <div className={styles.container}>
+      {blogData.map((item) => (
+        <Link
+          className={styles.item}
+          href={`/BlogPost/${item.slug}`}
+          passHref
+          key={item.id}
+        >
+          <img src={item.image} alt={item.title} />
+          <p className={styles.blog_text}>Blog</p>
+          <h3>{item.title}</h3>
+          <p>{item.description}</p>
+        </Link>
+      ))}
+
       <div className={styles.paging_body}>
         <div className={styles.paging}>
-          <div className={styles.paging_indicator}>
-            {`Page ${currentPage} of ${totalPages}`}
-          </div>
           {pageNumbers.map((number) => (
             <div
               key={number}
