@@ -5,15 +5,15 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 import Sidebar from "./Sidebar";
 import Top from "./Top";
-import Footer from "./Footer";
+import Footer from "./FooterCreate";
 
-import styles from "@/styles/Draft.module.css";
+import styles from "@/styles/All_post.module.css";
 import Delete_Edit_btn from "./Delete_Edit_btn";
 
 const Draft = () => {
   return (
     <div /*  className={styles.all_body} */>
-      <h2 className={styles.all_title}>DRAFT POST</h2>
+      <h2 className={styles.all_title}>DRAFT</h2>
 
       <Top />
       <Sidebar />
@@ -44,7 +44,15 @@ const Draft = () => {
           <div className={styles.action}>ACTION</div>
           <Delete_Edit_btn />
         </div>
-        {/* <Footer /> */}
+      </div>
+      <div>
+        <footer className={styles.footer}>
+          <div className={styles.copyright}>
+            <p>
+              ©2022 <span></span>
+            </p>
+          </div>
+        </footer>
       </div>
     </div>
   );

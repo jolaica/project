@@ -5,18 +5,19 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 import Sidebar from "./Sidebar";
 import Top from "./Top";
-import Footer from "./Footer";
+import Footer from "./FooterCreate";
 
-import styles from "@/styles/Deleted.module.css";
+import styles from "@/styles/All_post.module.css";
 import Delete_Edit_btn from "./Delete_Edit_btn";
 
 const Deleted = () => {
   return (
-    <div /* className={styles.all_body} */>
-      <h2 className={styles.all_title}>DELETED POST</h2>
+    <div /*  className={styles.all_body} */>
+      <h2 className={styles.all_title}>DELETED</h2>
 
       <Top />
       <Sidebar />
+
       <div className={styles.searchbar}>
         <input type="text" placeholder="Search" name="searchInput" />
         <button className={styles.searchIcon}>
@@ -43,6 +44,15 @@ const Deleted = () => {
           <div className={styles.action}>ACTION</div>
           <Delete_Edit_btn />
         </div>
+      </div>
+      <div>
+        <footer className={styles.footer}>
+          <div className={styles.copyright}>
+            <p>
+              ©2022 <span></span>
+            </p>
+          </div>
+        </footer>
       </div>
     </div>
   );

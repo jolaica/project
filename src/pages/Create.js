@@ -9,13 +9,18 @@ import styles from "@/styles/Create.module.css";
 
 const Create = () => {
   return (
-    <div className={styles.form_body}>
-      <h1 className={side.create}>Creating Post</h1>
-      <Top />
-      <ContainerForm />
-      <Sidebar />
-      <Back />
-    </div>
+    <>
+      <div className={styles.form_body}>
+        <h1 className={side.create}>Creating Post</h1>
+        <Top />
+        <ContainerForm />
+        <Sidebar />
+        <Back />
+      </div>
+      {/* <div>
+        <Footer />
+      </div> */}
+    </>
   );
 };
 

@@ -1,8 +1,8 @@
-import styles from "@/styles/Footer.module.css";
+import styles from "@/styles/FooterCreate.module.css";
 
 const Footer = () => {
   return (
-    <div>
+    <div className={styles.body}>
       <footer className={styles.footer}>
         <div className={styles.copyright}>
           <p>

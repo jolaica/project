@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Rubik&display=swap");
+
+/* Define the fonts */
+@font-face {
+  font-family: "Montserrat", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@800");
+}
+
+@font-face {
+  font-family: "Rubik", sans-serif;
+  src: url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+}
+
+/* Set the height of the body to 100% of the viewport height */
+/* Set the styles for the footer */
+.footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 84px;
+  width: 500px;
+  padding: 30px 20px;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+
+  margin-top: 60%;
+}

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "@/styles/Container.module.css";
+import Footer from "./FooterCreate";
 
 function ContainerForm() {
   const [title, setTitle] = useState("");
@@ -37,53 +38,56 @@ function ContainerForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} className={styles["form-container"]}>
-      <label htmlFor="title">TITLE</label>
-      <input
-        type="text"
-        id="title"
-        name="title"
-        value={title}
-        onChange={(event) => setTitle(event.target.value)}
-      />
-
-      <label htmlFor="content">CONTENT</label>
-      <textarea
-        id="content"
-        name="content"
-        value={content}
-        onChange={(event) => setContent(event.target.value)}
-      />
-
-      <div className={styles.image_box}>
-        {image ? (
-          <span>{image.name}</span>
-        ) : (
-          <span className={styles.no_file}>No file chosen</span>
-        )}
-        <button
-          className={styles.upload}
-          type="button"
-          id="uploadButton"
-          name="uploadButton"
-          onClick={handleUpload}
-        >
-          Upload
-        </button>
+    <>
+      <form onSubmit={handleSubmit} className={styles["form-container"]}>
+        <label htmlFor="title">TITLE</label>
         <input
-          type="file"
-          id="fileInput"
-          name="fileInput"
-          accept="image/*"
-          onChange={handleImageChange}
-          style={{ display: "none" }}
+          type="text"
+          id="title"
+          name="title"
+          value={title}
+          onChange={(event) => setTitle(event.target.value)}
         />
-      </div>
 
-      <button type="submit">Publish</button>
-      <button type="cancel">Cancel</button>
-      <button type="draft">Save as draft</button>
-    </form>
+        <label htmlFor="content">CONTENT</label>
+        <textarea
+          id="content"
+          name="content"
+          value={content}
+          onChange={(event) => setContent(event.target.value)}
+        />
+
+        <div className={styles.image_box}>
+          {image ? (
+            <span>{image.name}</span>
+          ) : (
+            <span className={styles.no_file}>No file chosen</span>
+          )}
+          <button
+            className={styles.upload}
+            type="button"
+            id="uploadButton"
+            name="uploadButton"
+            onClick={handleUpload}
+          >
+            Upload
+          </button>
+          <input
+            type="file"
+            id="fileInput"
+            name="fileInput"
+            accept="image/*"
+            onChange={handleImageChange}
+            style={{ display: "none" }}
+          />
+        </div>
+
+        <button type="submit">Publish</button>
+        <button type="cancel">Cancel</button>
+        <button type="draft">Save as draft</button>
+      </form>
+      <Footer />
+    </>
   );
 }
 

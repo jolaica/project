@@ -1,38 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 import Sidebar from "./Sidebar";
 import Top from "./Top";
-import Footer from "./Footer";
+import Footer from "./FooterCreate";
 
 import styles from "@/styles/All_post.module.css";
 import Delete_Edit_btn from "./Delete_Edit_btn";
 
 const All_post = () => {
-  // Set initial state values
-  const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setItemsPerPage] = useState(10);
-  const [items, setItems] = useState([
-    // Replace this with your data
-  ]);
-
-  // Logic to calculate the number of pages
-  const totalItems = items.length;
-  const totalPages = Math.ceil(totalItems / itemsPerPage);
-  const pageNumberArray = [...Array(totalPages).keys()].map((i) => i + 1);
-
-  // Logic to get the current page's items
-  const indexOfLastItem = currentPage * itemsPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = items.slice(indexOfFirstItem, indexOfLastItem);
-
   return (
-    <div /* className={styles.all_body} */>
-      <h2 className={styles.all_title}>ALL PUBLISHED POST</h2>
+    <div /*  className={styles.all_body} */>
+      <h2 className={styles.all_title}>ALL PUBLISHED</h2>
 
       <Top />
       <Sidebar />
+
       <div className={styles.searchbar}>
         <input type="text" placeholder="Search" name="searchInput" />
         <button className={styles.searchIcon}>
@@ -59,36 +44,15 @@ const All_post = () => {
           <div className={styles.action}>ACTION</div>
           <Delete_Edit_btn />
         </div>
-
-         <Footer />
       </div>
-
-      {/* Render the current items */}
-      {currentItems.map((item) => (
-        <div className={styles.table_body}>
-          <div className={styles.title_table}>
-            <div className={styles.title}>{item.title}</div>
+      <div>
+        <footer className={styles.footer}>
+          <div className={styles.copyright}>
+            <p>
+              ©2022 <span></span>
+            </p>
           </div>
-          <div className={styles.date_table}>
-            <div className={styles.date}>{item.date}</div>
-          </div>
-          <div className={styles.action_table}>
-            <div className={styles.action}>ACTION </div>
-          </div>
-        </div>
-      ))}
-
-      {/* Render the pagination links */}
-      <div className={styles.paging}>
-        {pageNumberArray.map((pageNumber) => (
-          <button
-            key={pageNumber}
-            onClick={() => setCurrentPage(pageNumber)}
-            className={pageNumber === currentPage ? styles.active : ""}
-          >
-            {pageNumber}
-          </button>
-        ))}
+        </footer>
       </div>
     </div>
   );

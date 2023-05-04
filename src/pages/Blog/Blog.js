@@ -23,7 +23,7 @@ const Blog = () => {
       searchInput
     )}&published=true&is_deleted=false`;
 
-    fetch(`http://192.168.1.7:8000/api/blog/search/${queryParams}`)
+    fetch(`http://192.168.1.2:8000/api/blog/search/${queryParams}`)
       .then((response) => response.json())
       .then((data) => {
         const filteredResults = data.results.filter((result) =>

@@ -196,3 +196,21 @@
 .action {
   margin-left: -90%;
 }
+
+/* Define the styles for the content container */
+
+/* Set the styles for the footer */
+.footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 84px;
+  width: 130%;
+  padding: 30px 20px;
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+
+  margin-top: 60%;
+}

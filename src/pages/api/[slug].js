@@ -2,9 +2,7 @@ export default async function handler(req, res) {
   const { slug } = req.query;
 
   try {
-    const response = await fetch(
-      `https://a39f-49-145-192-47.ngrok-free.app/api/blog/${slug}`
-    );
+    const response = await fetch(`http://192.168.1.2:8000/api/blog/${slug}`);
 
     if (!response.ok) {
       throw new Error("Failed to fetch blog data");

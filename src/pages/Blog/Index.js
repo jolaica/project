@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import styles from "@/styles/Images.module.css";
+import BlogPost from "@/pages/Blog/[slug]";
 
 const Images = () => {
   const [blogData, setBlogData] = useState([]);
@@ -51,12 +52,12 @@ const Images = () => {
   return (
     <div className={styles.container}>
       {blogData.map((item) => (
-        <Link href={`/BlogPost/${item.slug}`} passHref key={item.id}>
+        <Link href="/Blog/[slug]" as={`/Blog/${item.slug}`} key={item.id}>
           <div className={styles.item}>
             <img src={item.image} alt={item.title} />
             <p className={styles.blog_text}>Blog</p>
             <h3>{item.title}</h3>
-            <p>{item.description}</p>
+            <p>{item.truncated_description}</p>
           </div>
         </Link>
       ))}
